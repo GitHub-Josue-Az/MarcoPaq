@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head><title>JSF Event Handling</title>
+</h:head>
+<h:body>
+	<h2>JDBC Integration Example</h2>
+        <h:dataTable value="#{proDa.employees}" var="c"
+		styleClass="authorTable" headerClass="authorTableHeader"
+		rowClasses="authorTableOddRow,authorTableEvenRow">
+            
+		<h:column>
+			<f:facet name="header">Codigo</f:facet>
+			#{c.pro_codigo}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Nombre</f:facet>
+			#{c.pro_nombre}
+		</h:column>
+            <h:column>
+			<f:facet name="header">Precio</f:facet>
+			#{c.pro_precio}
+		</h:column>
+            <h:column>
+			<f:facet name="header">Stock</f:facet>
+			#{c.pro_stok}
+		</h:column>
+            <h:column>
+			<f:facet name="header">CodigoAlmacen</f:facet>
+			#{c.alm_codigo}
+		</h:column>
+            <h:column>
+			<f:facet name="header">Distrito</f:facet>
+			#{c.alm_distrito}
+		</h:column>
+            <h:column>
+			<f:facet name="header">Responsable</f:facet>
+			#{c.alm_responsable}
+		</h:column>
+            <h:column>
+			<f:facet name="header">CodigoSuministro</f:facet>
+			#{c.sum_codigo}
+		</h:column>
+            <h:column>
+			<f:facet name="header">Empresa</f:facet>
+			#{c.sum_empresa}
+		</h:column>
+            <h:column>
+			<f:facet name="header">Ruc</f:facet>
+			#{c.sum_ruc}
+		</h:column>
+            
+            
+	</h:dataTable>
+</h:body>
+</html>
+

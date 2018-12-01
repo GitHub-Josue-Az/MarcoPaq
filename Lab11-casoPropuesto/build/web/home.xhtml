@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      
+	xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+      <h1>Home</h1>
+        <h:form>
+            <h:messages errorStyle="color:red;" showDetail="true"/>
+            <h:panelGrid columns="2" > 
+                <h:outputText value="codigoProducto"/>
+                <h:inputText size="8" value="#{producto.pro_codigo}"/>
+                <h:outputText value="NombreProducto"/>
+                <h:inputText size="8" value="#{producto.pro_nombre}"/>
+                <h:outputText value="ProductoPrecio"/>
+                <h:inputText size="8" value="#{producto.pro_precio}"/>
+                <h:outputText value="ProductoStock"/>
+                <h:inputText size="8" value="#{producto.pro_stok}"/>
+                <h:outputText value="AlmacenCodigo"/>
+                <h:inputText size="8" value="#{producto.alm_codigo}"/>
+                <h:outputText value="SuministroCodigo"/>
+                <h:inputText size="8" value="#{producto.sum_codigo}"/>
+            </h:panelGrid> 
+            <h:commandButton value="Registrar" id="submit" action="#{producto.registrar()}"/>
+            <h:commandButton value="Listar" action="#{proDa.listar()}" />
+        </h:form>
+      
+      
+    </h:body>
+</html>
